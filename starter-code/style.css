@@ -461,6 +461,8 @@ section h3 {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 6;
+    top: 0;
+    left: 0;
 }
 
 .popup {
