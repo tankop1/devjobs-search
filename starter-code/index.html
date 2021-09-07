@@ -41,17 +41,17 @@
 
             <div class="search-section search-container-first">
 
-                <img src="assets/desktop/icon-search.svg" alt="search icon" />
+                <img src="assets/desktop/icon-search.svg" alt="search icon" class="hide-on-800" />
 
                 <input type="text" placeholder="Filter by title, companies, expertise..." id="search" />
 
             </div>
 
-            <div class="location-section">
+            <div class="location-section hide-on-1000">
 
-                <img src="assets/desktop/icon-location.svg" alt="location icon" />
+                <img src="assets/desktop/icon-location.svg" alt="location icon" class="hide-on-1000" />
 
-                <input type="text" placeholder="Filter by location..." id="location" list="locations" />
+                <input type="text" placeholder="Filter by location..." id="location" list="locations" class="hide-on-1000" />
 
                 <datalist id="locations">
                     <option value="United States">
@@ -67,12 +67,58 @@
 
             <div class="full-time-section">
 
-                <label class="checkbox-container">Full Time Only
+                <label class="checkbox-container hide-on-1000">
                     <input type="checkbox" id="full-time">
                     <span class="checkmark">
                         <img src="assets/desktop/icon-check.svg" alt="check" />
-                    </span>
+                    </span>Full Time
                 </label>
+
+                <button class="filter-button">
+                    <img src="assets/mobile/icon-filter.svg" alt="filter-icon" />
+                </button>
+
+                <button>
+                    <span class="hide-on-800">Search</span>
+                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" class="show-on-800"><path d="M17.112 15.059h-1.088l-.377-.377a8.814 8.814 0 002.15-5.784A8.898 8.898 0 008.898 0 8.898 8.898 0 000 8.898a8.898 8.898 0 008.898 8.899c2.211 0 4.23-.808 5.784-2.143l.377.377v1.081l6.845 6.832 2.04-2.04-6.832-6.845zm-8.214 0A6.16 6.16 0 118.9 2.737a6.16 6.16 0 010 12.322z" fill="white" fill-rule="nonzero"/></svg>
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="shader">
+
+            <div class="popup">
+
+                <div class="location-section-mobile">
+
+                    <img src="assets/desktop/icon-location.svg" alt="location icon" />
+    
+                    <input type="text" placeholder="Filter by location..." id="location" list="locations" />
+    
+                    <datalist id="locations">
+                        <option value="United States">
+                        <option value="United Kingdom">
+                        <option value="Russia">
+                        <option value="Germany">
+                        <option value="Japan">
+                        <option value="Singapore">
+                        <option value="New Zealand">
+                    </datalist>
+    
+                </div>
+
+                <div class="full-time-section-mobile">
+
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="full-time">
+                        <span class="checkmark">
+                            <img src="assets/desktop/icon-check.svg" alt="check" />
+                        </span>Full Time Only
+                    </label>
+    
+                </div>
 
                 <button>Search</button>
 
@@ -131,8 +177,8 @@
 
         <div>
 
-            <h3>Senior Software Engineer</h3>
-            <p>So Digital Inc.</p>
+            <h3 class="hide-on-550">Senior Software Engineer</h3>
+            <p class="hide-on-550">So Digital Inc.</p>
 
             <button>Apply Now</button>
 

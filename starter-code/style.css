@@ -128,11 +128,11 @@ header {
 }
 
 .search-section {
-    width: 48%;
+    width: 40%;
 }
 
 #search {
-    width: 92%;
+    width: 88%;
 }
 
 #location {
@@ -140,18 +140,20 @@ header {
 }
 
 .location-section {
-    width: 22%;
+    width: 25%;
 }
 
 .full-time-section {
     color: black;
     font-size: 0.8rem;
     font-weight: 600;
-    width: 23%;
+    width: 26%;
 }
 
 .checkbox-container {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     padding-left: 30px;
     cursor: pointer;
@@ -161,6 +163,8 @@ header {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-align: center;
+    margin-right: 15px;
 }
 
 [type="checkbox"] {
@@ -172,14 +176,13 @@ header {
 }
 
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 20px;
-    width: 20px;
+    width: 23px;
     border-radius: 3px;
     background-color: #eee;
     transition: background-color 300ms;
+    margin-left: -30px;
+    margin-right: 10px;
 }
 
 .checkmark img {
@@ -426,4 +429,260 @@ section h3 {
 
 .job-bottom div h3 {
     margin-top: 25px;
+}
+
+/* MEDIA QUERIES */
+
+.filter-button {
+    display: none;
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+    padding: 10px;
+    padding-bottom: 5px;
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+.filter-button:hover {
+    background-color: #eee;
+}
+
+.show-on-800 {
+    display: none;
+}
+
+.shader {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 105vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 6;
+    margin-top: 82vh;
+}
+
+.popup {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    width: 80%;
+    height: 250px;
+}
+
+.popup div {
+    color: black;
+}
+
+.location-section-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 35px 10%;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.location-section-mobile input {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.full-time-section-mobile {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 10%;
+    width: 150px;
+}
+
+.popup button {
+    width: 80%;
+    margin-left: 10%;
+}
+
+@media only screen and (max-width: 1350px) {
+    .job-top {
+        width: 65%;
+    }
+
+    section {
+        width: calc(65% - 100px);
+        margin-left: 17.5%;
+    }
+
+    .job-bottom div {
+        width: 65%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .job-top {
+        width: 75%;
+    }
+
+    section {
+        width: calc(75% - 100px);
+        margin-left: 12.5%;
+    }
+
+    .job-bottom div {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .hide-on-1000 {
+        display: none;
+    }
+
+    .filter-button {
+        display: block;
+    }
+
+    .location-section {
+        visibility: hidden;
+        width: 0px;
+    }
+
+    .full-time-section {
+        width: 35%;
+    }
+
+    .search-section {
+        width: 65%;
+        margin-right: -50px;
+    }
+
+    #search {
+        width: 100%;
+        margin-left: 15px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .job-top {
+        width: 85%;
+    }
+
+    section {
+        width: calc(85% - 100px);
+        margin-left: 7.5%;
+    }
+
+    .job-bottom div {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .job-top {
+        overflow: visible;
+        /*display: flex;*/
+        align-items: center;
+        flex-direction: column;
+        height: 165px;
+        bottom: -130px;
+    }
+
+    .job-logo-big {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: calc(50% - 25px);
+        top: -25px;
+        background-size: unset;
+        border-radius: 10px;
+    }
+
+    .job-top button {
+        position: static;
+        margin-top: -5px;
+    }
+
+    .company-info {
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .company-info h1 {
+        width: max-content;
+    }
+
+    .company-info p {
+        margin-top: -15px;
+    }
+
+    .description-top h1 {
+        font-size: 1.5rem;
+    }
+
+    .description-top button {
+        position: static;
+        width: 100%;
+    }
+
+    .job-bottom div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .job-bottom div button {
+        position: static;
+        width: 100%;
+    }
+
+    .hide-on-800 {
+        display: none;
+    }
+
+    .show-on-800 {
+        display: block;
+    }
+
+    .full-time-section button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: max-content;
+        padding: 10px;
+    }
+
+    .full-time-section button svg {
+        transform: scale(0.75);
+    }
+
+    .full-time-section {
+        width: 25%;
+    }
+
+    .search-container div {
+        border-left: none;
+    }
+
+    .search-section {
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    #search {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .hide-on-550 {
+        display: none;
+    }
 }

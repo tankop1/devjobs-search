@@ -110,6 +110,11 @@ const darkTheme = () => {
     $('.job-top').css({'color': 'white', 'background-color': '#19202D'});
     $('section').css({'color': 'white', 'background-color': '#19202D'});
     $('.job-bottom').css({'color': 'white', 'background-color': '#19202D'});
+
+    $('.popup').css({'background-color': '#19202D'});
+    $('.location-section-mobile').css({'border-bottom': '1px solid #313743'});
+    $('.location-section-mobile input').css({'color': 'white'});
+    $('.full-time-section-mobile').css({'color': 'white'});
 };
 
 $('.switch-container').click(() => {
@@ -179,3 +184,21 @@ function toJobDashboard() {
     $('section').css({'display': 'none'});
     $('.job-bottom').css({'display': 'none'});
 }
+
+// POPUP
+
+$('.filter-button').click(e => {
+    $('.shader').css({'display': 'flex'});
+});
+
+$('.shader').click(e => {
+    let container = $('.popup');
+
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+        $('.shader').css({'display': 'none'});
+    }
+});
+
+$('.popup button').click(e => {
+    $('.shader').css({'display': 'none'});
+});
